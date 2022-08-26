@@ -3,6 +3,8 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+import tensorflow as tf
+import gc
 
 
 def load_imgs_from_dataset(label_paths, paths, isTrain=True):
@@ -31,3 +33,9 @@ def split_dataset(X: np.ndarray, y: np.ndarray):
     return X_train, X_test, X_valid, y_train.values.reshape(-1, 1), y_test.values.reshape(-1, 1), y_valid.values.reshape(-1, 1)
 
 
+def clear_session():
+    """
+    Clears the current Keras session.
+    """
+    gc.collect()
+    tf.keras.backend.clear_session()

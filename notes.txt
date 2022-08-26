@@ -8,3 +8,9 @@ evaluation: accuracy
 --> We will drop the other features cuz, the submission template doesn't have an indication for that.
 --> No object localization is involved
 
+Model 1: [0.6532226204872131, 0.8751201033592224]
+Model 1 EarlyStopped: [0.7044097185134888, 0.8386167287826538]
+
+Model 2: [0.5820742249488831, 0.878962516784668]
+Model 2 EarlyStopped: [0.42904868721961975, 0.890489935874939]
+ 
