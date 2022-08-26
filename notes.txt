@@ -1,0 +1,10 @@
+10 catagories: 9 disease and 1 normal leaf
+meta data's are: paddyis variety and age
+task: classify each paddy imae in the given test data of 25%
+evaluation: accuracy
+
+
+--> we have to make the model to take one input(The image) and return a softmax probability output
+--> We will drop the other features cuz, the submission template doesn't have an indication for that.
+--> No object localization is involved
+
