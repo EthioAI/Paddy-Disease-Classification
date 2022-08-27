@@ -12,10 +12,16 @@ def load_imgs_from_dataset(label_paths, paths, isTrain=True):
     Load image from dataset
     """
     super_path = "train_images" if isTrain else "test_images"
-    imgs = np.array(
-        [cv2.resize(plt.imread(os.path.join("data", super_path, label_path, path[0])),
-                    (120, 160)) for (label_path, path) in zip(label_paths, paths)]
-    )
+    if isTrain:
+        imgs = np.array(
+            [cv2.resize(plt.imread(os.path.join("data", super_path, label_path, path[0])),
+                        (120, 160)) for (label_path, path) in zip(label_paths, paths)]
+        )
+    else:
+        imgs = np.array(
+            [cv2.resize(plt.imread(os.path.join("data", super_path, path)),
+                        (120, 160)) for path in paths]
+        )
     return imgs
 
 
